@@ -15,8 +15,8 @@
 
 import random # import the random module to our code 
 # declarations 
-secretnumber = 50
-playerGuess =  3
+secretnumber = 7  
+playerGuess =  ""
 playerScore = 0 
 cpuScore = 0
 numGuesses = 0
@@ -40,7 +40,7 @@ secretnumber = random.randint(0 , 100)
 print(secretnumber)
 print(f"{playername}: {playerScore}\nCPU Score: {cpuScore}.\n")
 X = 0
-difficulty = input("select a difficulty bum. scary, kinda scary and GOD")
+playername = input("put ya name bro.\n")
 while X < 100:
     secretnumber = random.randint(0 , 100)
     #print(secretnumber)
@@ -51,7 +51,8 @@ print("you need to guess the number from 0 to 100 and if. \nyou mess up you get 
 
 # use input () to store diffuculty levels
 #assign values to numattemps, rangwmin and rangemax
-playername = input("put ya name bro.\n")
+difficulty = input("select a difficulty bum. scary, kinda scary and GOD"
+                   )
 while playerScore != 3 and  cpuScore != 3:    #pass -- tells python to skip code 
     print(f"player score: {playerScore}\nCPU score: {cpuScore}.\n")
     secretnumber = random.randint(0 , 100)
@@ -65,7 +66,7 @@ while playerScore != 3 and  cpuScore != 3:    #pass -- tells python to skip code
             numattempts = 5
         elif difficulty == "kinda scary":
             rangemin = 1
-            rangemax = 100 
+            rangemax = 10
             numattempts = 3
         elif difficulty == "GOD":
             rangemin = 1
@@ -94,3 +95,4 @@ while playerScore != 3 and  cpuScore != 3:    #pass -- tells python to skip code
         print("THE CPU WINNNNSS YOU GUESS IT WRONG BUDDY.\n")
 if playerScore >= 3:
     print(" winner, winner you've one buddyyyyyyyy good job you scored 3 points")
+

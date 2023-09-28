@@ -39,7 +39,6 @@ print("""
 secretnumber = random.randint(0 , 100)
 print(secretnumber)
 print(f"{playername}: {playerScore}\nCPU Score: {cpuScore}.\n")
-# YOU NO LONGER NEED THIS LOOP CODE, IT WAS ONLY DONE TO TEST OUR RANDOM NUM. GENERATOR. 
 X = 0
 difficulty = input("select a difficulty bum. scary, kinda scary and GOD")
 while X < 100:
@@ -60,7 +59,6 @@ while playerScore != 3 and  cpuScore != 3:    #pass -- tells python to skip code
     # whenever you assign a specific value to something its called hard code 
 
     for guesses in range(4):
-        # DIFFICULTY VALUES SHOULD BE ASSIGNED BEFORE THE ROUND HAS STARTED. 
         if difficulty == "scary":
             rangemin = 1
             rangemax = 10 
@@ -74,7 +72,6 @@ while playerScore != 3 and  cpuScore != 3:    #pass -- tells python to skip code
             rangemax = 1000 
             numattempts = 1
         print(f"you have {numattempts - numGuesses} guesses remaining.\n")
-        # NUMBER OF GUESSES REMAINING ONLY UPDATES AFTER EACH ROUND! 
         playerGuess = int(input("type a number from 0 to 100 and press ENTER.\n"))
 
     print(f"you have chosen {playerGuess}. Let's see if you're right!\n")
@@ -92,19 +89,8 @@ while playerScore != 3 and  cpuScore != 3:    #pass -- tells python to skip code
         else:
             print("your guess is to low.\n")
     numGuesses += 1
-    # CODE BELOW SHOULD BE OUTSIDE while LOOP SCOPE. 
     if playerGuess != secretnumber:
         cpuScore += 1
         print("THE CPU WINNNNSS YOU GUESS IT WRONG BUDDY.\n")
 if playerScore >= 3:
     print(" winner, winner you've one buddyyyyyyyy good job you scored 3 points")
-
-
-    
-
-
-
-
-
-
-

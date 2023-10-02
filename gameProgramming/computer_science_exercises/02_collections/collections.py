@@ -41,7 +41,7 @@ print(breakfastfoods)
 print(testscores)
 print(classGPA)
 
-wyoc
+#wyoc
 
 breakfastfoods[4] = "milk"
 testscores[4] = 15

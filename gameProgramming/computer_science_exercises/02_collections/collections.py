@@ -24,3 +24,9 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99,4.25]
 #print(classGPA[-1])
 #print(testscores[-1])
 
+# write code
+
+print(breakfastfoods[2])
+print(classGPA[2])
+print(testscores[2])
+

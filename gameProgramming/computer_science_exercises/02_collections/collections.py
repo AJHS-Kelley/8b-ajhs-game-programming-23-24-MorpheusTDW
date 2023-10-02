@@ -26,7 +26,7 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99,4.25]
 
 # write code
 
-print(breakfastfoods[2])
-print(classGPA[2])
-print(testscores[2])
+#print(breakfastfoods[2])
+#print(classGPA[2])
+#print(testscores[2])
 

@@ -1,4 +1,4 @@
-# collection examples , phillip henry, v0.0
+# collection examples , phillip henry, v0.1b
 # list--- ordered, changeable, allows duplicate values
 #
 breakfastfoods = ["waffles","pancakes" , "cereal", "milk"]
@@ -8,3 +8,8 @@ breakfastfoods = ["waffles","pancakes" , "cereal", "milk"]
 # python only: index -1 it is the last item on the list
 testscores = [95, 100, 25, 15, 27, 35]
 classGPA = [3.14, 2.25, 1.74, 1.99, 0.99,4.25]
+
+#printing contents of an list
+print(breakfastfoods)
+print(testscores)
+print(classGPA)

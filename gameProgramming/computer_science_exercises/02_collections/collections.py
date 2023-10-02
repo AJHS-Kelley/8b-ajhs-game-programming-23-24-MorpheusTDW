@@ -40,3 +40,9 @@ print(classGPA[0])
 print(breakfastfoods)
 print(testscores)
 print(classGPA)
+
+wyoc
+
+breakfastfoods[4] = "milk"
+testscores[4] = 15
+classGPA[4] = 1.99

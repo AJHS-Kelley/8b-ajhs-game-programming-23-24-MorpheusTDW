@@ -30,3 +30,13 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99,4.25]
 #print(classGPA[2])
 #print(testscores[2])
 
+#changing iteams in a list
+breakfastfoods[0] = "waffles"
+testscores[0] = 95
+classGPA[0] = 3.14
+print(breakfastfoods[0])
+print(testscores[0])
+print(classGPA[0])
+print(breakfastfoods)
+print(testscores)
+print(classGPA)

@@ -43,6 +43,34 @@ print(classGPA)
 
 #wyoc
 
-breakfastfoods[4] = "milk"
-testscores[4] = 15
-classGPA[4] = 1.99
+#breakfastfoods[4] = "milk"
+#testscores[4] = 15
+#classGPA[4] = 1.99
+#print(breakfastfoods0)
+#print(testscores)
+#print(classGPA)
+
+# adding and inserting items to a list
+#. append() adds an iteam to the end of the list
+#breakfastfoods.append("hashbrowns")
+#print(breakfastfoods)
+#testscores.append(100)
+#print(testscores)
+#lassGPA.append(3.90)
+#print(classGPA)
+# .insert() allows you to place an iteam at a specific index in the list
+#breakfastfoods.insert(3,"yorgurt")
+#print(breakfastfoods)
+#classGPA.insert(2, 2.5)
+#print(classGPA)
+#testscores.insert(3,400)
+
+#wyoc
+
+breakfastfoods.insert(2,"fruit")
+print(breakfastfoods)
+testscores.insert(2, 87)
+print(testscores)
+classGPA.insert(1, 4.8)
+print(classGPA)
+

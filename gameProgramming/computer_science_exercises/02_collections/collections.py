@@ -75,8 +75,24 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99,4.25]
 #print(classGPA)
 
 #determning list length
-print(f"there are{len(breakfastfoods)}items in the breakfasts list.")
-print(f"there are{len(testscores)}items in the testscores list.")
-print(f"there are{len(classGPA)}items in the classGPA list.")
+#print(f"there are{len(breakfastfoods)}items in the breakfasts list.")
+#print(f"there are{len(testscores)}items in the testscores list.")
+#print(f"there are{len(classGPA)}items in the classGPA list.")
+
+#list meathods -- functions for working with lists,
+# sorting lists -- alphanumerical -- ascending -- capital letters before lower case letters
+print(f"the original breakfastfoods list is {breakfastfoods}.")
+breakfastfoods.sort()
+print(f"the sorted breakfastfoods list is {breakfastfoods}.")
+print(f"the original testscores list is {testscores}.")
+testscores.sort()
+print(f"the original testscores list is {testscores}.")
+print(f"the original classGPA list is {classGPA}.")
+classGPA.sort()
+print(f"the original classGPA list is {classGPA}.")
+
+
+
+
 
 

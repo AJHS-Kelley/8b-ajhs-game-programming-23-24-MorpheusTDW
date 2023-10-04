@@ -91,6 +91,12 @@ print(f"the original classGPA list is {classGPA}.")
 classGPA.sort()
 print(f"the original classGPA list is {classGPA}.")
 
+breakfastfoods = ["waffles","pancakes" , "cereal", "milk"]
+testscores = [95, 100, 25, 15, 27, 35]
+classGPA = [3.14, 2.25, 1.74, 1.99, 0.99,4.25]
+#.count() will return the number of times a value appears in a list
+numwaffles = breakfastfoods.count("waffles")
+
 
 
 

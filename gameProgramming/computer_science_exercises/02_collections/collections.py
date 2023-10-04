@@ -31,15 +31,15 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99,4.25]
 #print(testscores[2])
 
 #changing iteams in a list
-breakfastfoods[0] = "waffles"
-testscores[0] = 95
-classGPA[0] = 3.14
-print(breakfastfoods[0])
-print(testscores[0])
-print(classGPA[0])
-print(breakfastfoods)
-print(testscores)
-print(classGPA)
+#breakfastfoods[0] = "waffles"
+#testscores[0] = 95
+#classGPA[0] = 3.14
+#print(breakfastfoods[0])
+#print(testscores[0])
+#print(classGPA[0])
+#print(breakfastfoods)
+#print(testscores)
+#print(classGPA)
 
 #wyoc
 
@@ -67,10 +67,16 @@ print(classGPA)
 
 #wyoc
 
-breakfastfoods.insert(2,"fruit")
-print(breakfastfoods)
-testscores.insert(2, 87)
-print(testscores)
-classGPA.insert(1, 4.8)
-print(classGPA)
+#breakfastfoods.insert(2,"fruit")
+#print(breakfastfoods)
+#testscores.insert(2, 87)
+#print(testscores)
+#classGPA.insert(1, 4.8)
+#print(classGPA)
+
+#determning list length
+print(f"there are{len(breakfastfoods)}items in the breakfasts list.")
+print(f"there are{len(testscores)}items in the testscores list.")
+print(f"there are{len(classGPA)}items in the classGPA list.")
+
 

@@ -1,3 +1,4 @@
+import random  import numrolled
 # function -- a named piece of code that can be reused easily 
 # funtion signature -- syntax for creating a new function
 def exampleFunction(): # no parameters
@@ -15,5 +16,20 @@ def exampleFunctionB(num, count): #parameters
 # if a function requires parameters your code will crash without them
 
 # running a function is know as calling the function
-exampleFunction(30)
-exampleFunctionB(5, 0)
+#exampleFunction(30)
+#exampleFunctionB(5, 0)
+def rolldice(numdice,sizedice):
+    while numrolled < numdice:
+        roll = random.randint(1,sizedice)
+        print (f"Roll: {roll}\n")
+        numrolled += 1
+rolldice(3, 6)
+rolldice(1, 20)
+rolldice(10, 7)
+rolldice(20, 3)
+
+
+
+
+
+

@@ -87,6 +87,20 @@ def getguess(alreadyguessed):
         else:
             return guess 
         def playagain()
+        print('do you want to play again? yes or no')
+        return input().lower().startswith('y')
+    
+    print('welcome to hangman by phil')
+    missedletters = ''
+    correctletters = ''
+    secretword = getrandomwords(words)
+    gameisdone = False
+    while true:
+        displayboard(missedletters, correctletters, secretword)
+
+        guess = getguess(missedletters + correctletters)
+        if guess in secretword:
+            correctletters = correctletters + guess
 
 
 

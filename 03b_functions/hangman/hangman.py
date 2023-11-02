@@ -102,6 +102,32 @@ def getguess(alreadyguessed):
         if guess in secretword:
             correctletters = correctletters + guess
 
+            foundallletters = True
+            for i in range(len(secretword)):
+                if secretword[i] not in correctletters:
+                    foundallletters = False
+                    break
+                if foundallletters:
+                    print('wow u won aginst a bot your so good')
+                    print('the secret word was' + secretword)
+                    gameisdone = true
+                else:
+                    missedletters = missedletters + guess
+                    if len(missedletters) == len(HANGMAN_BOARD) - 1:
+                        displayboard(missedletters, correctletters, secretword)
+                        print('imagine losing lil bro')
+                        print('you only made this number of corret guesses' + str(len(correctletters)))
+                        print('the secret word was' + secretword)
+                        gameisdone - True
+                        if gameisdone:
+                            if playagain():
+                                
+
+
+
+
+
+
 
 
 

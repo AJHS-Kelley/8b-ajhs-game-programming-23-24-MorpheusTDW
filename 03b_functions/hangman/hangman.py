@@ -43,7 +43,7 @@ HANGMAN_BOARD =  ['''
         / \   |         
           ===== '''    ]
 i = 0 
-while i < len(HANGMAN_BOARD)
+while i < len(HANGMAN_BOARD):
     print(HANGMAN_BOARD[i])
     i += 1
 # PICK word from list
@@ -62,4 +62,14 @@ def displayboard(missedletters, correctletters, secretword):
     for eachletter in missedletters 
     print(eachletter, end = ' ')
     print()
+
+    blanks - '' * len(secretword)
+    for i in range(len(secretword)):
+        if secretword[i] in correctletters:
+            blanks = blanks[:i] + secretword[i] + blanks[i+1:]
+            
+    for letter in blanks:
+        print(letter, end = '')
+        print()
+                                                    
 

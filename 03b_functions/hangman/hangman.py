@@ -59,8 +59,8 @@ while i < 50:
 def displayboard(missedletters, correctletters, secretword):
     print(HANGMAN_BOARD[len(missedletters)])
     print('missed letters:', end = ' ')
-    for eachletter in missedletters 
-    print(eachletter, end = ' ')
+    for eachletter in missedletters:
+        print(eachletter, end = ' ')
     print()
 
     blanks - '' * len(secretword)
@@ -71,5 +71,27 @@ def displayboard(missedletters, correctletters, secretword):
     for letter in blanks:
         print(letter, end = '')
         print()
-                                                    
+
+
+def getguess(alreadyguessed):
+    while true:
+        print("pick a letter from all 26 letters of the alphabet.")
+        guess = input()
+        guess = guess.lower()
+        if len(guess) != 1:
+            print("put one letter ONLY.")
+        elif guess in alreadyguessed:
+            print("letter guesses already, try again ")
+        elif guess not in 'abcdefghijklmnopqrstuvwxyz':
+            print('please guess a letter only from the english alphabet.')
+        else:
+            return guess 
+
+
+
+
+
+
+
+
 

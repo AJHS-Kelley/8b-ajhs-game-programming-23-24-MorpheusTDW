@@ -1,5 +1,13 @@
 import random
-words = "dragon ball awesome plankton apple cat rat fat plat hat cap rap ultra hulk captian america spider man gwen ultimate battle marvel versus capcom three number lock Antidisestablishmentarianism Floccinaucinihilipilification mortal kombat fighterz two wubba lubba dub dub goku vegeta".split()
+#words = "dragon ball awesome plankton apple cat rat fat plat hat cap rap ultra hulk captian america spider man gwen ultimate battle marvel versus capcom three number lock Antidisestablishmentarianism Floccinaucinihilipilification mortal kombat fighterz two wubba lubba dub dub goku vegeta".split()
+#dictionary version 
+#stored in key:value pairs 
+#actual dictonary word (key) : value (defintion)
+#uses {} to specify a dictionary
+words = {'colors':'red orange yellow green blue prurple violet black gold silver white.split(),'
+        'animals': 'cat rat cat bat dog dragon fish moose goose alligator'
+        'shapes':' square circle rombus triangle rectangle trapizoid diamond'
+        'food':' hamburger pizza hotdog waffle potato pancake chips steake'}
 HANGMAN_BOARD =  ['''
         +---+
             |                  
@@ -42,15 +50,25 @@ HANGMAN_BOARD =  ['''
         /|\   |
         / \   |         
           ===== '''    ]
-i = 0 
-while i < len(HANGMAN_BOARD):
-    print(HANGMAN_BOARD[i])
-    i += 1
+['''
+         +---+
+         0    |                  
+       o-|-o   |
+        / \   |         
+          ===== '''    ]
+#i = 0 
+#while i < len(HANGMAN_BOARD):
+#    print(HANGMAN_BOARD[i])
+#    i += 1
 # PICK word from list
 def getrandomword(wordlist):
     wordindex = random.randint(0,len(wordlist)-1)
 #len(listname) - 1 is extreamly common for working with lists
-return wordlist [wordindex]
+return wordlist[wordindex]
+def getrandomword(wordDict):
+    wordkey = random.choice(list(worddict.key()))
+    wordindex = random.randint(0, len(wordDict[wordkey]- 1))
+    return [wordDict[wordkey][wordindex], wordkey]
 i = 0
 while i < 50:
     word = randomword(words)
@@ -86,16 +104,29 @@ def getguess(alreadyguessed):
             print('please guess a letter only from the english alphabet.')
         else:
             return guess 
-        def playagain()
-        print('do you want to play again? yes or no')
+        def playagain():
+            print('do you want to play again? yes or no')
         return input().lower().startswith('y')
-    
-    print('welcome to hangman by phil')
+    difficulty = 'X'
+while difficulty not in 'EMH':
+    print('please chose easy medium or hard type the first letter in upper case please ')
+    diffuculty = input().upper()
+    if difficulty == 'M':
+        del HANGMAN_BOARD[8]
+        del HANGMAN_BOARD[7]
+        if difficulty == 'H':
+         del HANGMAN_BOARD[8]
+        del HANGMAN_BOARD[7]
+        del HANGMAN_BOARD[6]
+        del HANGMAN_BOARD[5]
+        print('welcome to hangman by phil')
     missedletters = ''
     correctletters = ''
-    secretword = getrandomwords(words)
+    secretword, secretset = getrandomword(words) 
     gameisdone = False
+
     while true:
+        print('the secret word is from the ' + secretset + 'catagory.\n')
         displayboard(missedletters, correctletters, secretword)
 
         guess = getguess(missedletters + correctletters)
@@ -121,7 +152,9 @@ def getguess(alreadyguessed):
                         gameisdone - True
                         if gameisdone:
                             if playagain():
-                                
+                               missedletters = ''
+                               correctletters = ''
+                               gameisdone = False
 
 
 

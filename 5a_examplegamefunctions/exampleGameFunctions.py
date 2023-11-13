@@ -22,6 +22,7 @@ def choosefighter(row):
     print('player 1 please choose a fighter')
     if row > 5:
         playerselect = 'anyone from row 5'
+        fightersfromrow5 = ('kimberly, jack, reaper, chaos, scorpion, zero, kasmo')
 
 
 

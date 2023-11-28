@@ -1,6 +1,4 @@
 #example game functions project phillip henry v1.0
-import random
-print("Welcome to the muticlash!")
 
 print("""
     *~~~~~~~~~~~~~~~~~~~~~~~~~*
@@ -10,22 +8,24 @@ print("""
      |                         |
      |~~~~~~~~~~~~~~~~~~~~~~~~~* """)
 
-def playerselect(row, playernumber, charcterpick, column ):
-    if row > 5 and playernumber >= 1 and charcterpick == 'kimberly':
-        charcterpick = True
-    elif row > 6 and playernumber >= 3 and charcterpick == 'jackthedog':
-        charcterpick = False 
-    else:
-        print('choose a fighter in the ring')
-        incorrectfighter = True
-        return incorrectfighter
-    return playerselect
-def choosefighter(row):
-    print('player 1 please choose a fighter')
-    if row > 5:
-        playerselect = 'anyone from row 5'
-        fightersfromrow5 = ('kimberly, jack, reaper, chaos, scorpion, zero, kasmo')
-        fighterlist = ['kimberly']
+def get_player_info(self):
+        name = input("Enter your name: ")
+        print(f"Welcome, {name}!")
+
+        # Allow the player to choose a character (you can expand the character options)
+        print("Choose your character:")
+        print("1. kimberly")
+        print("2. reaper")
+        print("3. goku")
+        character_choice = input("Enter the number corresponding to your choice: ")
+
+        # Store player information
+        self.players[name] = {"Character": self.get_character_name(int(character_choice))}
+
+        def get_character_name(self, choice):
+            characters = {1: "kimberly", 2: "reaper", 3: "goku"}
+            return characters.get(choice, "Unknown")
+
    # select map
    
 maps = ["City", "Forest", "Arena"]

@@ -3,14 +3,6 @@ import random
 def functionOne():
     pass
 
-def functionTwo(param1):
-    pass
-
-def functionThree(param1 = "default value"):
-    pass
-
-def functionFour(param1, param2, param3):
-    pass 
 
 def playerselect(row, playernumber, charcterpick, column ):
     if row > 5 and playernumber >= 1 and charcterpick == 'kimberly':
@@ -27,9 +19,14 @@ def choosefighter(row):
     if row > 5:
         playerselect = 'anyone from row 5'
         fightersfromrow5 = ('kimberly, jack, reaper, chaos, scorpion, zero, kasmo')
-        
-
-
-
-
-    
+        fighterlist = ['kimberly']
+print("Welcome to the Fighting Game!")
+   
+    # Select Map
+    maps = ["City", "Forest", "Arena"]
+    print("Select a Map:")
+    for i, map_option in (maps, 1):
+        print(f"{i}. {map_option}")
+    map_choice = int(input("Enter the number of your chosen map: "))
+    selected_map = maps[map_choice - 1]
+   

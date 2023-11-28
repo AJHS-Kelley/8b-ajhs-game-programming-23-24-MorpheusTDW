@@ -20,13 +20,13 @@ def choosefighter(row):
         playerselect = 'anyone from row 5'
         fightersfromrow5 = ('kimberly, jack, reaper, chaos, scorpion, zero, kasmo')
         fighterlist = ['kimberly']
-print("Welcome to the Fighting Game!")
-   
-    # Select Map
-    maps = ["City", "Forest", "Arena"]
-    print("Select a Map:")
-    for i, map_option in (maps, 1):
-        print(f"{i}. {map_option}")
-    map_choice = int(input("Enter the number of your chosen map: "))
+
+print("Welcome to the Fighting Game!")   
+maps = ["City", "Forest", "Arena"]
+print("Select a Map:")
+for i, map_option in (maps, 1):
+    print(f"{i}. {map_option}")
+    map_choice = (input("Enter the number of your chosen map: "))
     selected_map = maps[map_choice - 1]
+    
    

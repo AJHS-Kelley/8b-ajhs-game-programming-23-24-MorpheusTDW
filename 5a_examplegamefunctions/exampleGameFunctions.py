@@ -2,12 +2,16 @@
 import random
 def functionOne():
     pass
+
 def functionTwo(param1):
     pass
+
 def functionThree(param1 = "default value"):
-    pass 
+    pass
+
 def functionFour(param1, param2, param3):
     pass 
+
 def playerselect(row, playernumber, charcterpick, column ):
     if row > 5 and playernumber >= 1 and charcterpick == 'kimberly':
         charcterpick = True
@@ -23,6 +27,7 @@ def choosefighter(row):
     if row > 5:
         playerselect = 'anyone from row 5'
         fightersfromrow5 = ('kimberly, jack, reaper, chaos, scorpion, zero, kasmo')
+        
 
 
 

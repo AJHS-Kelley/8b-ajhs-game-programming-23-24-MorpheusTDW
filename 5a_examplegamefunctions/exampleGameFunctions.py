@@ -30,18 +30,27 @@ def get_player_info(self):
    
 maps = ["City", "Forest", "Arena"]
 print("Select a Map:")
-for i, map_option in (maps, 1):
-    print(f"{i}. {map_option}")
-    map_choice = (input("Enter the number of your chosen map: "))
-    selected_map = maps[map_choice - 1]
+print("type 1 for the city 2 for the forest and 3 for the arena")    
+map_choice = int(input("Enter the number of your chosen map: "))
+selected_map = ""
+
+
+if map_choice <= 3 and map_choice >= 1:
+      print(selected_map)
+else:
+      print(" L bozo your getting the arena")
+      map_choice = 3
+      selected_map = maps[map_choice - 1]
+      print(selected_map)
+
 
     # Select Day
-    days = ["Monday", "Wednesday", "Friday"]
-    print("Select a Day:")
-    for i, day_option in (days, 1):
-        print(f"{i}. {day_option}")
-    day_choice = int(input("Enter the number of your chosen day: "))
-    selected_day = days[day_choice - 1]
+#days = ["Monday", "Wednesday", "Friday"]
+#print("Select a Day:")
+#for i, day_option in (days, 1):
+#        print(f"{i}. {day_option}")
+#day_choice = int(input("Enter the number of your chosen day: "))
+#selected_day = days[day_choice - 1]
 
 
    

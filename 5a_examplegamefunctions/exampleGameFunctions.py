@@ -71,3 +71,4 @@ print("""
 
    
    # CODE REVIEW BY JORDAN HENRY
+   # Code review by Xavier Oliver (get_player_info doesn't run, map options don't print)

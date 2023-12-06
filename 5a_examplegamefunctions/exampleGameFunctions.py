@@ -1,5 +1,9 @@
 #example game functions project phillip henry v1.0
 
+# Missing two of four functions. 
+# Missing import random and use of random.randint() function.  
+# Missing for loop or while loop. 
+
 print("""
     *~~~~~~~~~~~~~~~~~~~~~~~~~*
      |     welcome to          |
@@ -22,9 +26,9 @@ def get_player_info(self):
         # Store player information
         self.players[name] = {"Character": self.get_character_name(int(character_choice))}
 
-        def get_character_name(self, choice):
-            characters = {1: "kimberly", 2: "reaper", 3: "goku"}
-            return characters.get(choice, "Unknown")
+def get_character_name(self, choice):
+      characters = {1: "kimberly", 2: "reaper", 3: "goku"}
+      return characters.get(choice, "Unknown")
 
    # select map
    

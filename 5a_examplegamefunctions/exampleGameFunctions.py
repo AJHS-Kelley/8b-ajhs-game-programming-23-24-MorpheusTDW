@@ -26,9 +26,9 @@ def get_player_info(self):
         # Store player information
         self.players[name] = {"Character": self.get_character_name(int(character_choice))}
 
-def get_character_name(self, choice):
-      characters = {1: "kimberly", 2: "reaper", 3: "goku"}
-      return characters.get(choice, "Unknown")
+        def get_character_name(self, choice):
+            characters = {1: "kimberly", 2: "reaper", 3: "goku"}
+            return characters.get(choice, "Unknown")
 
    # select map
    
@@ -56,15 +56,20 @@ print("Choose your character:")
 print("1. kimberly")
 print("2. reaper")
 print("3. goku")
+print("4. random")
+import random 
+character_choice = ["reaper", "kimberly", "goku"]
+raandom_character = random.choice(character_choice)
+print("your random chracter chosen issssssssssssssssssssss", raandom_character)
+
 character_choice = input("Enter the number corresponding to your choice: ")
 print(f"ok so your fighting at the {selected_map} on the day of {day_choice} with the character{character_choice} ok lets fight {name}")
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 print("""
     *~~~~~~~~~~~~~~~~~~~~~~~~~*
-     |     FIGHT!!!         2
-     |
-     | 0              0         |
-     |/|\            /|\        |
+     |     fight               |
+     | 0              0        |
+     |/|\            /|\       |
      |/_\____________/_\_______ |
      |~~~~~~~~~~~~~~~~~~~~~~~~~* """)      
 

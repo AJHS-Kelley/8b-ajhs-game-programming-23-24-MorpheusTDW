@@ -1,5 +1,13 @@
 #dice rolling module
 import random
+def roll(numdice,sizedice):
+    while numrolled < numdice:
+        roll = random.randint(1,sizedice)
+        sum += roll
+        numrolled += 1
+        sum = 0
+    return sum
+
 def rolldice(numdice,sizedice):
     while numrolled < numdice:
         roll = random.randint(1,sizedice)
@@ -8,3 +16,4 @@ def rolldice(numdice,sizedice):
         print(f"sum: {sum}\n")
         numrolled += 1
         sum = 0
+        return sum

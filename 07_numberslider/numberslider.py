@@ -11,3 +11,11 @@ WINDOWHEIGHT = 480
 FPS = 30
 BLANK = None
 
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+BRIGHTBLUE = (0, 50, 255)
+DARKTURQUOISE = (3, 54, 73)
+green = (0, 204, 0)
+
+
+

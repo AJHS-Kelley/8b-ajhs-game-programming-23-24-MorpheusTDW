@@ -1,2 +1,12 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+#ultimate pygame phillip henry
+import pygame
+screen = pygame.display.set_mode((800,400))
+
+while true:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+        pygame.quit()
+        exit()
+
+
+    pygame.display.update()

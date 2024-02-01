@@ -32,6 +32,28 @@ def doTranscription(dnaSequence: str, basesRequested: str) -> tuple:
     return (rnaSequence, rnaTime)
 
 
+# Tuples are ORDERED -- you can reference itmes with the index
+    # Tuples are UNCHANGEABLE -- you cannot add, modify, or delete after creating
+    # Tuples can have duplicate values
+def verifySequence(dnaSequence: str, rnaSequence: str) -> bool:
+    isMatch = False
+    if len(dnaSequence) != len(rnaSequence):
+        print("Since the Sequence are not equal, they do not match.\n")
+        return isMatch
+    for dnaBase, rnaBase in zip(dnaSequence, rnaSequence):
+        if dnaBase == "A" and rnaBase == "U":
+            isMatch = True
+        elif dnaBase == "C" and rnaBase == "G":
+            isMatch = True
+        elif dnaBase == "G" and rnaBase == "C":
+            isMatch =  True
+        elif dnaBase == "T" and rnaBase == "A":
+            isMatch = True
+        else:
+            print("They do not match because no base is True.\n")
+    return isMatch
+
+
     
 
     

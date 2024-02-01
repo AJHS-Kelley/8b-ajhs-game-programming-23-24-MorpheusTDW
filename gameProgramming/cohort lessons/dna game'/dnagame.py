@@ -62,7 +62,17 @@ def calcScore(rnaSequence: str, rnaTime: float) -> float:
     else:
         score += 25000
         print("You tried your best <3\n")
-        
+        scoreMulti = 0.0
+    if len(rnaSequence) >= 10:
+        scoreMulti = 3.0
+    elif len(rnaSequence) >= 5:
+        scoreMulti = 2.0
+    else: 
+        scoreMulti = 0.01
+    score *= scoreMulti
+    return score
+
+
 
     
 

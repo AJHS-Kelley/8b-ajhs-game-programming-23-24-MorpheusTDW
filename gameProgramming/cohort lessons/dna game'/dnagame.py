@@ -53,6 +53,16 @@ def verifySequence(dnaSequence: str, rnaSequence: str) -> bool:
             print("They do not match because no base is True.\n")
     return isMatch
 
+def calcScore(rnaSequence: str, rnaTime: float) -> float:
+    score = 0
+    if rnaTime < 3.0:
+        score += 1000000
+    elif rnaTime < 15.0:
+        score += 5000
+    else:
+        score += 25000
+        print("You tried your best <3\n")
+        
 
     
 

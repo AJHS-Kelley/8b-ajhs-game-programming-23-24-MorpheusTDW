@@ -40,6 +40,8 @@ def verifySequence(dnaSequence: str, rnaSequence: str) -> bool:
     if len(dnaSequence) != len(rnaSequence):
         print("Since the Sequence are not equal, they do not match.\n")
         return isMatch
+    
+    
     for dnaBase, rnaBase in zip(dnaSequence, rnaSequence):
         if dnaBase == "A" and rnaBase == "U":
             isMatch = True
@@ -72,7 +74,7 @@ def calcScore(rnaSequence: str, rnaTime: float) -> float:
     score *= scoreMulti
     return score
 
-def saveScore(dnaSequence: str, rnaSequence: str, rnaTime: int, score: float) -> None:
+def saveScore(dnaSequence: str, rnaSequence: str, rnaTime: float, score: float) -> None:
     playerName = input("What is your first name?\n")
     lastName = input("What is your last name?\n")
     fullName = playerName + "  " + lastName

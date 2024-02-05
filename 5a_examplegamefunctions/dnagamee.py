@@ -1,3 +1,5 @@
+# Code crashes immediately when trying to test.  Please address and resubmit. 
+
 #DNAGame phillip henry
 # Import entire tool box
 import time, datetime

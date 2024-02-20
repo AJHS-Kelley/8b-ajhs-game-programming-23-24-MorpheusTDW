@@ -2,6 +2,11 @@ import pygame
 from sys import exit
 from random import randint, choice
 
+# I went through your GitHub history and I do not see where you actually wrote this code.  
+# You had one update ~10 days ago with 27 lines of code.  Then there are a few more updates with 50-60 lines
+# that had no revisions.  It appears all you did was download the provided code and tried to pass it off as your own. 
+
+
 class Player(pygame.sprite.Sprite):
 	def __init__(self):
 		super().__init__()

@@ -1,41 +1,21 @@
-#input the iintergers
-#.split() the 3 intergers into seprate variables
-#cast the 3 variables to  intergers
-#assign corrext values from < to > 
-#a < b < c
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+mystring =  "type a random string with puncuation, please. \n"
 
-intergers = input()
-a,b,c = intergers.split()
-a = int()
-b = int()
-c = int()
+print(alphabet[0])
 
-print(f"a: {a} b: {b} c: {c}")
-if a >= b:
-    a, b = b, a    
-if b>= c:
-        b, c = c, b
-if b <= a:
-      b, a = a,b
+print(alphabet[-1])
 
-print(f"a: {a} b: {b} c: {c}")
+print(alphabet[0:4])
 
-#input the string variable 
-#determine order of abc
-#create correct string 
-#output string
+print(alphabet[:7])
 
-order = input()
-mystring = ""
+print(alphabet[12:])
 
-for i in range(len(order)):
-    if order[i] == "A":
-          mystring += str(a) + " "
-    elif order [i] == "B":
-        string += str(b) + " "
-    else:
-        string += str(c) + " " 
+print(alphabet[:])
 
+print(alphabet[-4:-1])
+
+print(alphabet[8:7])
 
       
    

@@ -7,17 +7,17 @@ from random import randint, choice
 class Player(pygame.sprite.Sprite):
 	def __init__(self):
 		super().__init__()
-		player_walk_1 = pygame.image.load('UltimatePygameIntro-main/UltimatePygameIntro-main/graphics/player/player_walk_1.png').convert_alpha()
-		player_walk_2 = pygame.image.load('UltimatePygameIntro-main/UltimatePygameIntro-main/graphics/player/player_walk_2.png').convert_alpha()
+		player_walk_1 = pygame.image.load('img/atom render/8b-ajhs-game-programming-23-24-MorpheusTDW/graphics/player_walk_1.png').convert_alpha()
+		player_walk_2 = pygame.image.load('img/atom render/8b-ajhs-game-programming-23-24-MorpheusTDW/graphics/graphics/player_walk_2.png').convert_alpha()
 		self.player_walk = [player_walk_1,player_walk_2]
 		self.player_index = 0
-		self.player_jump = pygame.image.load('UltimatePygameIntro-main/UltimatePygameIntro-main/graphics/player/jump.png').convert_alpha()
+		self.player_jump = pygame.image.load('img/atom render/8b-ajhs-game-programming-23-24-MorpheusTDW/graphics/jump.png').convert_alpha()
 
 		self.image = self.player_walk[self.player_index]
 		self.rect = self.image.get_rect(midbottom = (80,300))
 		self.gravity = 0
 
-		self.jump_sound = pygame.mixer.Sound('UltimatePygameIntro-main/UltimatePygameIntro-main/audio/jump.mp3')
+		self.jump_sound = pygame.mixer.Sound('img/atom render/8b-ajhs-game-programming-23-24-MorpheusTDW/graphics/jump.mp3')
 		self.jump_sound.set_volume(0.5)
 
 	def player_input(self):
@@ -50,13 +50,13 @@ class Obstacle(pygame.sprite.Sprite):
 		super().__init__()
 		
 		if type == 'fly':
-			fly_1 = pygame.image.load('UltimatePygameIntro-main/UltimatePygameIntro-main/graphics/fly/fly1.png').convert_alpha()
-			fly_2 = pygame.image.load('UltimatePygameIntro-main/UltimatePygameIntro-main/graphics/fly/fly2.png').convert_alpha()
+			fly_1 = pygame.image.load('img/atom render/8b-ajhs-game-programming-23-24-MorpheusTDW/graphics/fly1.png').convert_alpha()
+			fly_2 = pygame.image.load('img/atom render/8b-ajhs-game-programming-23-24-MorpheusTDW/graphics/fly2.png').convert_alpha()
 			self.frames = [fly_1,fly_2]
 			y_pos = 210
 		else:
-			snail_1 = pygame.image.load('UltimatePygameIntro-main/graphics/snail/snail1.png').convert_alpha()
-			snail_2 = pygame.image.load('UltimatePygameIntro-main/graphics/snail/snail2.png').convert_alpha()
+			snail_1 = pygame.image.load('img/atom render/8b-ajhs-game-programming-23-24-MorpheusTDW/graphics/snail1.png').convert_alpha()
+			snail_2 = pygame.image.load('img/atom render/8b-ajhs-game-programming-23-24-MorpheusTDW/graphics/snail2.png').convert_alpha()
 			self.frames = [snail_1,snail_2]
 			y_pos  = 300
 
@@ -96,11 +96,11 @@ pygame.init()
 screen = pygame.display.set_mode((800,400))
 pygame.display.set_caption('Runner')
 clock = pygame.time.Clock()
-test_font = pygame.font.Font('UltimatePygameIntro-main/UltimatePygameIntro-main/font/Pixeltype.ttf', 50)
+test_font = pygame.font.Font('img/atom render/8b-ajhs-game-programming-23-24-MorpheusTDW/graphics/Pixeltype.ttf',50)
 game_active = False
 start_time = 0
 score = 0
-bg_music = pygame.mixer.Sound('UltimatePygameIntro-main/UltimatePygameIntro-main/audio/music.wav')
+bg_music = pygame.mixer.Sound('img/atom render/8b-ajhs-game-programming-23-24-MorpheusTDW/graphics/music.wav')
 bg_music.play(loops = -1)
 
 #Groups
@@ -109,11 +109,11 @@ player.add(Player())
 
 obstacle_group = pygame.sprite.Group()
 
-sky_surface = pygame.image.load('UltimatePygameIntro-main/UltimatePygameIntro-main/graphics/Sky.png').convert()
-ground_surface = pygame.image.load('UltimatePygameIntro-main/UltimatePygameIntro-main/graphics/ground.png').convert()
+sky_surface = pygame.image.load('img/atom render/8b-ajhs-game-programming-23-24-MorpheusTDW/graphics/Sky.png').convert()
+ground_surface = pygame.image.load('img/atom render/8b-ajhs-game-programming-23-24-MorpheusTDW/graphics/ground.png').convert()
 
 # Intro screen
-player_stand = pygame.image.load('UltimatePygameIntro-main/graphics/player/player_stand.png').convert_alpha()
+player_stand = pygame.image.load('img/atom render/8b-ajhs-game-programming-23-24-MorpheusTDW/graphics/player_stand.png').convert_alpha()
 player_stand = pygame.transform.rotozoom(player_stand,0,2)
 player_stand_rect = player_stand.get_rect(center = (400,200))
 

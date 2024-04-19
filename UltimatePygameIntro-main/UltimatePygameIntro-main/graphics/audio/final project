@@ -2,13 +2,14 @@ from pygame import mixer
     
 import pygame
 
+import pygame
 
 # Initialize Pygame
 pygame.init()
 
 # Load the audio file
-audio_file ="graphics\audio\music.wav"
-pygame.mixer.music.load(audio_file)
+audio_file = "path/to/audio/"
+pygame.mixer.music.load()
 
 # Play the audio
 pygame.mixer.music.play()

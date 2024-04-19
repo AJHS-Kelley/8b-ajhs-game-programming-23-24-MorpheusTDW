@@ -1,5 +1,24 @@
+from pygame import mixer 
+    
 import pygame
- 
+
+
+# Initialize Pygame
+pygame.init()
+
+# Load the audio file
+audio_file ="graphics\audio\music.wav"
+pygame.mixer.music.load(audio_file)
+
+# Play the audio
+pygame.mixer.music.play()
+
+# Keep the program running until the audio finishes playing
+while pygame.mixer.music.get_busy():
+    continue
+
+# Quit Pygame
+pygame.quit()
 pygame.init()
  
 # Font that is used to render the text

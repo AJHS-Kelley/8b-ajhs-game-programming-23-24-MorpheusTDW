@@ -163,8 +163,8 @@ def main():
 		geek2.update(geek2YFac)
 		point = ball.update()
 
-		# -1 -> Geek_1 has scored
-		# +1 -> Geek_2 has scored
+		# -1 -> PLAYER 1 has scored
+		# +1 -> PLAYER 2 has scored
 		# 0 -> None of them scored
 		if point == -1:
 			geek1Score += 1

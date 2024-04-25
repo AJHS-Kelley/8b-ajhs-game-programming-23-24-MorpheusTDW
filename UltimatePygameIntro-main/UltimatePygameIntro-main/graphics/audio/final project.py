@@ -1,5 +1,11 @@
 import pygame
 
+# Suggestions to Add
+# Music / Sounds 
+# Difficulty Levels -- Faster Ball, Slower Paddles, Paddle Size 
+# Power-Ups -- ?
+# Win Condition -- End the Game After X Number of Points 
+
 pygame.init()
 
 # Font that is used to render the text

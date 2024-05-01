@@ -1,6 +1,96 @@
 import pygame
 
+import sys
+import pygame
+import sys
+
+class Ball:
+    def __init__(self, x, y, speed):
+        self.x = x
+        self.y = y
+        self.speed = speed
+        self.radius = 20
+        self.color = (255, 0, 0)
+
+    def update(self):
+        self.y += self.speed
+
+    def draw(self, screen):
+        pygame.draw.circle(screen, self.color, (self.x, self.y), self.radius)
+
 pygame.init()
+
+# Set up the display
+screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("Difficulty Selection")
+
+font = pygame.font.Font(None, 36)
+text = font.render("Choose Difficulty: Press 'e' for Easy, 'm' for Medium, 'h' for Hard", True, (0, 0, 0))
+text_rect = text.get_rect(center=(400, 300))
+
+ball = Ball(400, 300, 5)  # Default ball speed
+
+# Main loop for difficulty selection
+running = True
+while running:
+    screen.fill((255, 255, 255))
+    screen.blit(text, text_rect)
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_e:
+                ball.speed = 3  # Easy difficulty
+                running = False
+            elif event.key == pygame.K_m:
+                ball.speed = 5  # Medium difficulty
+                running = False
+            elif event.key == pygame.K_h:
+                ball.speed = 10  # Hard difficulty
+                running = False
+
+    ball.update()
+    ball.draw(screen)
+
+    pygame.display.flip()
+
+# Main game loop with the selected ball speed
+print("Selected Difficulty - Ball Speed:", ball.speed)
+pygame.init()
+
+# Set up the display
+screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("welocome to pong!!")
+
+# Font setup
+font = pygame.font.Font(None, 36)
+text = font.render("Press Space to Start", True, (0, 0, 0))
+text_rect = text.get_rect(center=(400, 300))
+
+# Main loop for the title screen
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                running = False  # Exit the title screen loop
+
+    # Fill the screen with a color (e.g., white)
+    screen.fill((255, 255, 255))
+
+    # Display the text
+    screen.blit(text, text_rect)
+
+    # Update the display
+    pygame.display.flip()
+
+# Start your main game loop here
+# Include your existing game code or import your game script here
+
 
 # Font that is used to render the text
 font20 = pygame.font.Font('freesansbold.ttf', 20)
@@ -163,8 +253,8 @@ def main():
 		geek2.update(geek2YFac)
 		point = ball.update()
 
-		# -1 -> Geek_1 has scored
-		# +1 -> Geek_2 has scored
+		# -1 -> PLAYER 1 has scored
+		# +1 -> PLAYER 2 has scored
 		# 0 -> None of them scored
 		if point == -1:
 			geek1Score += 1
@@ -190,7 +280,6 @@ def main():
 
 		pygame.display.update()
 		clock.tick(FPS)	 
-
 
 if __name__ == "__main__":
 	main()

@@ -28,7 +28,10 @@ font = pygame.font.Font(None, 36)
 text = font.render("Choose Difficulty: Press 'e' for Easy, 'm' for Medium, 'h' for Hard", True, (0, 0, 0))
 text_rect = text.get_rect(center=(400, 300))
 
-ball = Ball(400, 300, 5)  # Default ball speed
+ball = Ball(400, 900, 10)  # Default ball speed
+
+print("Selected Difficulty - Ball Speed:", ball.speed)
+pygame.init()
 
 # Main loop for difficulty selection
 running = True

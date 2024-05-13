@@ -157,7 +157,6 @@ class Striker:
 
 # Ball class
 
-
 class Ball:
 	def __init__(self, posx, posy, radius, speed, color):
 		self.posx = posx
